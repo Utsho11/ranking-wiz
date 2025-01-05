@@ -41,26 +41,49 @@ export default function NavBar() {
   };
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    {
+      title: "About",
+      path: "/about",
+    },
+    {
+      title: "Services",
+      children: [
+        {
+          title: "Seo",
+          path: "/",
+        },
+        {
+          title: "E-commerce Seo",
+          path: "/",
+        },
+        {
+          title: "Social Media Marketing",
+          path: "/",
+        },
+        {
+          title: "Monitoring",
+          path: "/",
+        },
+        {
+          title: "Web Design",
+          path: "/",
+        },
+        {
+          title: "Web Development",
+          path: "/",
+        },
+      ],
+    },
+    {
+      title: "Contact",
+      path: "/contact",
+    },
   ];
 
   return (
     <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="sm:hidden pr-3" justify="start">
         <NavbarBrand>
-          {/* <Link href="/">
-            <Logo />
-            <p className="font-bold text-inherit">RankingWiz</p>
-          </Link> */}
           <Link href="/">
             <div className="flex items-center">
               <Logo size={24} />
@@ -142,33 +165,56 @@ export default function NavBar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
-          <Button
-            isIconOnly
-            className="bg-transparent"
-            size="sm"
-            variant="solid"
-            onClick={toggleTheme}
-          >
+          <button className="bg-transparent" onClick={toggleTheme}>
             {theme === "dark" ? (
               <MoonFilledIcon size={16} />
             ) : (
               <SunFilledIcon size={16} />
             )}
-          </Button>
+          </button>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/">
             Help & Support
           </Link>
         </NavbarItem>
       </NavbarContent>
 
+      <NavbarContent className="sm:hidden" justify="center">
+        <NavbarItem>
+          <button className="bg-transparent" onClick={toggleTheme}>
+            {theme === "dark" ? (
+              <MoonFilledIcon size={16} />
+            ) : (
+              <SunFilledIcon size={16} />
+            )}
+          </button>
+        </NavbarItem>
+      </NavbarContent>
+
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full" href="#">
-              {item}
-            </Link>
+          <NavbarMenuItem key={index}>
+            {item.children ? (
+              <div className="">
+                <span className="font-bold">{item.title}</span>
+                <hr />
+                <div className="">
+                  {item.children.map((child, childIndex) => (
+                    <div key={childIndex} className="">
+                      <Link className="w-full" href={child.path}>
+                        {child.title}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+                <hr />
+              </div>
+            ) : (
+              <Link className="w-full" href={item.path}>
+                {item.title}
+              </Link>
+            )}
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

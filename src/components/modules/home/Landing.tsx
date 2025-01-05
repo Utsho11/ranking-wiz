@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/button";
+// import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import Link from "next/link";
 
@@ -15,9 +15,9 @@ const Landing = () => {
           retention rate since 2024.
         </p>
         <Link href="/contact">
-          <Button className="bg-[#BA68C8]" color="primary">
+          <button className="bg-[#BA68C8] text-sm p-2 rounded-lg">
             Contact us
-          </Button>
+          </button>
         </Link>
       </div>
       <div className="hidden sm:flex-1 sm:flex justify-center lg:justify-end">
