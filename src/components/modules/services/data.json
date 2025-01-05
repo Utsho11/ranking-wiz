@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Web Design & Development",
+    "description": "Stunning and responsive websites.",
+    "icon": "/web.svg"
+  },
+  {
+    "name": "E-commerce Solutions",
+    "description": "Online stores that convert visitors into customers.",
+    "icon": "/e-commerce.svg"
+  },
+  {
+    "name": "SEO Optimization",
+    "description": "Rank higher and get discovered.",
+    "icon": "/seo.svg"
+  },
+  {
+    "name": "Mobile App Development",
+    "description": "Engaging mobile experiences.",
+    "icon": "mobile.svg"
+  },
+  {
+    "name": "Website Maintenance",
+    "description": "Hassle-free updates and support.",
+    "icon": "tool.svg"
+  }
+]

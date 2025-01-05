@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What services do you offer?",
+    "answer": "We provide web design and development, e-commerce solutions, SEO optimization, mobile app development, and website maintenance."
+  },
+  {
+    "question": "How long does it take to build a website?",
+    "answer": "The timeline depends on the complexity and requirements of the project. On average, it can take anywhere from 2 to 8 weeks."
+  },
+  {
+    "question": "Do you offer custom website designs?",
+    "answer": "Yes, we create fully custom designs tailored to your business needs and branding guidelines."
+  },
+  {
+    "question": "Can you help with website hosting and domain registration?",
+    "answer": "Absolutely! We assist in selecting the right hosting plan and domain for your website and handle the setup process."
+  },
+  {
+    "question": "Do you provide ongoing support after the website is launched?",
+    "answer": "Yes, we offer website maintenance packages to ensure your website stays updated, secure, and functional."
+  },
+  {
+    "question": "Can you optimize my website for search engines?",
+    "answer": "Yes, our SEO optimization services include keyword research, on-page SEO, and technical SEO to help your website rank higher in search results."
+  }
+]
