@@ -11,9 +11,9 @@ const Services = () => {
         {serviceData.map((service, idx) => (
           <div
             key={idx + 1}
-            className="flex flex-col gap-4 p-6 rounded-md shadow-md hover:shadow-lg hover:shadow-[#BA68C8]"
+            className="flex flex-col gap-4 p-6 rounded-md border-x-2 border-x-[#BA68C8] shadow-md hover:shadow-lg hover:shadow-[#BA68C8]"
           >
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
               <Image
                 alt={service.name}
                 className="rounded-lg"

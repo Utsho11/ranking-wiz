@@ -5,7 +5,7 @@ import { Logo } from "../../icons";
 const Footer = () => {
   return (
     <div className="bg-[#bd8fc5] grid sm:grid-cols-4 p-4 sm:p-16">
-      <div>
+      <div className="px-8">
         <Link href="/">
           <div className="flex items-center">
             <Logo size={42} />
